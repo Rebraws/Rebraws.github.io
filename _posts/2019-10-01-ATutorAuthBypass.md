@@ -17,6 +17,7 @@ Hi! Two days ago i wrote a [post](https://rebraws.github.io/ATutor/) analyzing a
 At figure 1 we can see the Login page from ATutor, but before reading the source code of the application i want to see how does the login requests looks, so i set up burp and intercepted a login request (See figure 2.)
 
 ![](/images/ATutor/loginReq.png)
+
 <sub><sup>Figure 2. Login request intercepted with Burp</sup></sub>
 
 As we can see in Figure 2, the following parameters are sent to the web server
@@ -107,12 +108,12 @@ Below we have an image showing the value of SHA1(CONCAT('78b946e75265cd70834815e
 Now that we have the value for from_password_hidden we only have to send a login request with the parameters token=REBRAWS and form_password_hidden=4c3174453fcff6b123d5542b0c0cf163258862a6, see Figure 7.
 
 ![bypass](/images/ATutor/bypass.png)
-sub><sup>Figure 6. Crafted request to bypass authentication </sup></sub>
+<sub><sup>Figure 7. Crafted request to bypass authentication </sup></sub>
 
 ![bypass2](/images/ATutor/bypass2.png)
-<sub><sup>Figure 7. Succesfully logged in as Administrator</sup></sub>
+<sub><sup>Figure 8. Succesfully logged in as Administrator</sup></sub>
 
-Finally in figure 6 we can see the crafted request and in figure 7 we have succesfully got in as Administrator, but remember that this is only exploitable if we know the hashed password of the user and in this case we know it because of the previous SQL injection vulnerability.
+Finally in figure 7 we can see the crafted request and in figure 8 we have succesfully got in as Administrator, but remember that this is only exploitable if we know the hashed password of the user and in this case we know it because of the previous SQL injection vulnerability.
 
 Thanks for reading and if you have any suggestion or question you can send me a PM to Twitter! [@Rebraws1](https://twitter.com/Rebraws1)
 
