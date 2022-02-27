@@ -10,9 +10,9 @@ header:
 
 ### Reflect C++
 
-Reflective programming is a language feature that provides the ability to
+Reflective programming is a language feature that provides the ability of a program to
 examine, introspect and even modify its structure. C++ does not
-support reflection, but Matus Chochlik wrote a reflection TS implementation for clang. 
+support reflection, but Matus Chochlik wrote a reflection TS implementation for clang. See: [link](https://github.com/matus-chochlik/llvm-project) 
 
 We will not use this implementation because it's not part of the standard yet, 
 but I think it's worth seeing a few examples of how it works before proceeding.
