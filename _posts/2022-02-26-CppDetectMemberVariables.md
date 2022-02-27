@@ -167,6 +167,155 @@ int main() {
 }
 ```
 
+You can test this code in compile explorer: [](https://godbolt.org/z/W7fb5o4br) 
 
 
-<iframe width="800px" height="200px" src="https://godbolt.org/e#z:OYLghAFBqRAWIDGB7AJgUwKKoJYBdkAnAGhxAgDMcAbdAOwEMBbdEAcgEY3iLk68Ayoga0QHABw8%2BeAKoBndAAUAHuwAM3AFZji1BnVCIApACYAQqbPEFtRHhx9y9VAGFk1AK5M6IEwDZiZwAZHDp0ADkvACN0QhAAFgBmYgAHZDl8Bzo3T29fALSM%2Bz4QsMimGLik63RbYroBPAZCPByvH38auqzG5rxSiOjYhOS5Jpa2vM6xvoHyypGASmtkD0JEVjZTRNDETwwAaiNEl3RlFNicFn4RAHpCdAo648wjNQBBbd399COTscIoWAAH0AG44dAAdxeb0%2BJh2dD2HkOxxczUIDAAnjCPl9ET8/i4HAD0MwcZ8PgCPHYDgIjgB2Cy4j4HA63ABUBzcdCpdiIB3Zt1hrJQPLwZxShFpEFCeAOdCGJAOY1QIBAAKBYIhkIO4uUeEWBxAByY81iEAVFViy2FrJNABUzngIHqDQyLPSACKw22isYSqUMDwEA4UDyI%2BoQQ1%2BuUAWheB1ByBwqHdRi9PpZbM5AFl0FapaDmjgGFFaHIBUKs7KTWbCMcme9WSq1RqDFqoQ6nQ2fRnEo3YRyDgAJWoXKXipgpPTig57BhyCu8KXhlIMRAAayBJvQTVjyCimnQNIUAEcPPQNpXYZPpwxZ6j54uAHSvg728lPiuj6jjtMfFIPDLHBEBAW0ZnsRA5z4f1zilFsQHRLFUQQtsQXBKFiGVHAAC90GQChX2fCB7UWBNgF3cJmHQOQo3/Js7QePA1jod0EIlS5riaag1QeJ5jzwNUKLwYFGBYMFUQ/RJMCI9NvX7W05N7eSBw%2BIdHSnGdfjDCMsl1OB7wOJiWIrPBCAvA4cAoSy5SoOhUArUwTFNRUnMs1i8DgX5anzeg8DkW0DgI5VkBYaCblCWJWUFG98zvB8Ti/LlpAYSL62k2EYwDA4gxDAy5GBFyCzBYtS1oCBuSaNL5WouRDXjaSDiiZB3Ho1llwOCAYxy4NkFMPwarC40xJow100bO1LOsi1qL%2BeTPSOExnLrJyxsZIzdxY3VzPQBsGW9LMlKzYzCFYigRAUHtcQzZl3hrJhUroOjxszBiRrkNcrz4uo5uVPBVRADjAS4kReMeZ4FNu1lbQ8DIDBNZBfu%2BgMIAEMjIYY2HtxYYqzwvRFfmOBbkbsITd2BVB7wYQr80qAq8FRJg%2BoyjGYbh4ADlXdcN3QVMiY2/jSZALnN2BPHL3QYEGZOH9xywnHKjF9BzwlmFWazCCQPC2DJR6kN3t%2BkWeYB4SqJYWj0dUhirO1vVJXgBdCrrErATK9AZvNxY1omu0EJQYNCVRRaTAAMVWeza0VRNSrLdAwHjsA3NRIOwC2ABWFw6FTq6GLk2oFDa33/rVf25WTk5g/CRGisqaPXdj0Nw9Tcgk5OFP08z7OMehm6KQYk7WLUHO5LYZYeLYNPuB8NgNGIZB2BcSxLBCtYr22LhiEEmfR%2BIeAQFWPBALwUhyBQKcaGGDhAlwAg4iv3h%2BCEERWA4eIpH4eQlFUbfN4eTYN8hBiFI7AuBj3YJPYg09Z7zzYAAeWDEfIK1llDiD8LGPw8Q5x6HhhAEm9RDQVVCikC%2BUp16LG4FvDQyw95n2IbQEgZAupEJIUgbBII8FZB4DQcUhA5DkCiOobgURQjNExCA7gZ8uKwLoNQMRP8MAPQMKIeROAHh2BwKCGigjAjKGPMGTYs9ZS1G0dQHAUQMSEExG4DA2izJXHEcsJ4DBgByAAGralgRcaeG8H6CGEKIV%2B79ZAKBUNo7QV82FICXuYXQZi%2BGQGWMgFI9Q%2BFsFjCqImxhzCWBMAwA4sYADqIhqD5IKU6DEpS5AGVQMgHUhTRSaN4XpQpFxKb8C1rGWBagDjcBsAJLITh7KTB8FfYIkU6w6EKJkPgwzJnpGmXQOYiodB9PUXwXoEx3DtBWT5NZDRxj9HGcsq%2BMxNm5BGdYA5SyCxiGWHIVY6wX6/3QP/He48IFQO4DAlBaCMFYP0BzXB4N%2Bl8AIYvbJMSDjYHwPydeWE3Dn3oYtRIHByGb0EV7YgG4xBqDULodg8RuBMBxXiz5c92C9JAHiyho9liNIyI4eIQA%3D"></iframe>
+
+
+### Detecting member variables with C++20
+
+In the previous example we saw how to detect member variables using reflection, 
+but as we said reflect is not part of the standard, so now we are going to see
+how to detect member variables with C++20
+
+There are several ways to do this, we are going to do two of them, first we are
+going to implement it with templates and at the end we will do it with concepts
+which is a new feature in C++20
+
+
+We are going to use the same structure from the previous example
+```
+struct S {
+  
+  /* Constructor */
+  constexpr S(int number, std::string_view text) : mNumber(number), 
+    mText(text) {}
+
+  /* Member variables */
+  int mNumber;
+  std::string_view mText;  
+};
+```
+
+Now we want to find if the structure has some variable with the name "mNumber"
+
+So we will declare a template class like this:
+
+```
+template <class T, class U = int>
+struct has_member_variable {
+  static constexpr bool value{false};
+};
+```
+
+The has_member_variable template class contains a boolean attribute defaulted
+to false, so if we test this template class we will notice that 
+has_member_variable::value is always false
+
+In order to detect if a variable exists we need to do a template specialization
+like this
+
+```
+template <class T, class U = int>
+struct has_member_variable {
+  static constexpr bool value{false};
+};
+
+template <class T>
+struct has_member_variable<T, decltype((void)T::mNumber, 0)> {
+  static constexpr bool value{true};
+};  
+
+```
+
+
+So now that we have a template specialization, when we instantiate the template
+has_member_variable, if the class contains a member variable with the name mNumber
+the compiler is going to use the specialized template
+
+Let's see has_member_variable in an example
+
+
+```
+int main() {
+
+  if constexpr (has_member_variable<S>::value) {
+    return 5;
+  }
+  
+  return 0;
+} 
+
+```
+
+
+So in this example if the class S contains mNumber as a member variable
+then the program returns 5, otherwise it returns 0
+
+You can see the full example in compiler explorer: [](://godbolt.org/z/6cWfb59ed)
+
+
+
+Now that we have seen how to use templates to detect if a member variable exists
+we are going to do it again but using concepts, concepts are a new feature in C++20
+and they are basically named boolean predicates on template parameters that are evaluated
+at compile time
+
+The definition of a concept has the following form:
+
+```
+template <paramters>
+concept concept-name = constraint-expression;
+```
+
+Note that a constraint is a sequence of logical operations and operands 
+that specifies requirements on template arguments
+
+
+So now that we know what concepts are we will do a concept named has_member_variable 
+
+```
+template <class T>
+concept has_member_variable = requires (T t) { t.mNumber; };
+```
+
+Now we have a concept named has_member_variable that requires to the template
+argument to have a mNumber variable
+
+We can test this concept with a program exactly like the one form the previous example
+
+
+```
+#include <string_view>
+
+struct S {
+
+  /* Constructor */
+  constexpr S(int number, std::string_view text) : mNumber(number),
+    mText(text) {}
+
+  /* Member variables */
+  int mNumber;
+  std::string_view mText;
+};
+
+template <class T>
+concept has_member_variable = requires (T t) { t.mNumber; };
+
+
+
+int main() {
+  
+  if constexpr(has_member_variable<S>) {
+    return 5; 
+  } 
+
+  return 0;
+}
+
+```
+
+You can try this code in compile explorer: [](https://godbolt.org/z/9f3x58vWe)
+ 
+
+
