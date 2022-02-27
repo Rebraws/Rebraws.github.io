@@ -4,7 +4,7 @@ date: 2022-02-26
 tags: [C++, metaprogramming, template, member variable, detect member variable,
 	cpp, programming, templates, has_member, concepts, C++20, requires]
 header:
-  image: "/images/cpp/morris.jpg"
+  image: "/images/cpp/morris.png"
 ---
 
 
@@ -113,7 +113,7 @@ public:
 ```
 
 Now we can unpack the meta-object sequence with unpack_sequence, 
-te first argument of unpack_sequence needs to be the template class, and the
+the first argument of unpack_sequence needs to be the template class, and the
 second argument is the meta-object sequence type
 
 So the code will look like this:
@@ -167,7 +167,7 @@ int main() {
 }
 ```
 
-You can test this code in compile explorer: [](https://godbolt.org/z/W7fb5o4br) 
+You can test this code in compile explorer: [link](https://godbolt.org/z/W7fb5o4br) 
 
 
 
@@ -252,7 +252,7 @@ int main() {
 So in this example if the class S contains mNumber as a member variable
 then the program returns 5, otherwise it returns 0
 
-You can see the full example in compiler explorer: [](://godbolt.org/z/6cWfb59ed)
+You can see the full example in compiler explorer: [link](https://godbolt.org/z/6cWfb59ed)
 
 
 
@@ -264,7 +264,7 @@ at compile time
 The definition of a concept has the following form:
 
 ```
-template <paramters>
+template <parameters>
 concept concept-name = constraint-expression;
 ```
 
@@ -315,7 +315,7 @@ int main() {
 
 ```
 
-You can try this code in compile explorer: [](https://godbolt.org/z/9f3x58vWe)
+You can try this code in compile explorer: [link](https://godbolt.org/z/9f3x58vWe)
  
 
 
