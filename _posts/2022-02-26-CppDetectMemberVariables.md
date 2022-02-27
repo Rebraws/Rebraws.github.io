@@ -133,7 +133,7 @@ int main() {
 ```
 
 So now we have an array (names) with all the member variables name from the 
-struct S, and for example we could make a function that returns true if 
+struct S, and for example, we could make a function that returns true if 
 there is a variable with the name "mNumber"
 
 We could have something like this:
@@ -174,13 +174,13 @@ You can test this code in compile explorer: [link](https://godbolt.org/z/W7fb5o4
 
 ### Detecting member variables with C++20
 
-In the previous example we saw how to detect member variables using reflection, 
-but as we said reflect is not part of the standard, so now we are going to see
-how to detect member variables with C++20
+In the previous example, we saw how to detect member variables using reflection, 
+but as we said, reflect is not part of the standard, so now we will see
+how to detect member variables using only what the C++ standard provides.
 
 There are several ways to do this, we are going to do two of them, first we are
 going to implement it with templates and at the end we will do it with concepts
-which is a new feature in C++20
+which is a new feature in C++20.
 
 
 We are going to use the same structure from the previous example
@@ -209,7 +209,7 @@ struct has_member_variable {
 ```
 
 The has_member_variable template class contains a boolean attribute defaulted
-to false, so if we test this template class we will notice that 
+to false, so if we test this template class as it is we will notice that 
 has_member_variable::value is always false
 
 In order to detect if a variable exists we need to do a template specialization
@@ -230,7 +230,7 @@ struct has_member_variable<T, decltype((void)T::mNumber, 0)> {
 
 
 So now that we have a template specialization, when we instantiate the template
-has_member_variable, if the class contains a member variable with the name mNumber
+has_member_variable if the class contains a member variable with the name mNumber
 the compiler is going to use the specialized template
 
 Let's see has_member_variable in an example
@@ -258,7 +258,7 @@ You can see the full example in compiler explorer: [link](https://godbolt.org/z/
 
 Now that we have seen how to use templates to detect if a member variable exists
 we are going to do it again but using concepts, concepts are a new feature in C++20
-and they are basically named boolean predicates on template parameters that are evaluated
+and they are named boolean predicates on template parameters that are evaluated
 at compile time
 
 The definition of a concept has the following form:
