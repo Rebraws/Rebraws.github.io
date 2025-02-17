@@ -10,7 +10,7 @@ author: Rebraws
 
 
 
-#### Metaprogramming in C++17: Dive into Compile-Time Instrospection and SFINAE
+#### Metaprogramming in C++17: Dive into Compile-Time Introspection and SFINAE
 
 C++17 wields a powerful arsenal of compile-time tools, most notably through type traits, type traits allow us to investigate the properties of a type in C++ like: Is it a class? Is it integral? Does it have a specific member function?
 
