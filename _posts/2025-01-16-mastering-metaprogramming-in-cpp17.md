@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Metaprogramming in C++17 Dive into Compile Time Instrospection and SFINAE
+title: Metaprogramming in C++17 Dive into Compile Time Introspection and SFINAE
 subtitle:  Brace Yourself for Error Messages You Didn't Know Existed.
-tags: [test]
-comments: true
+tags: tags: [C++, Metaprogramming, C++17, Templates, Type Traits, SFINAE, Compile-time, decltype, std::declval, static_assert, C++ Programming]
+comments: false
 mathjax: true
 author: Rebraws
 ---
